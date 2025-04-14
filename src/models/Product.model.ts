@@ -20,4 +20,5 @@ class Product extends Model {
     })
     disponibilidad: boolean
 }
+
 export default Product
