@@ -1,5 +1,4 @@
 import { Table, Column, Model, DataType, Default } from "sequelize-typescript"
-import { Col } from "sequelize/types/utils"
 
 @Table({
     tableName: 'products'
