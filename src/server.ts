@@ -15,7 +15,10 @@ async function connetDB() {
     }
 }
 connetDB()
+// Instancia de Express
 const server = express()
+// Leer datos de forms
+server.use(express.json())
 
 server.use('/api/products', router)
 

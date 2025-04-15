@@ -1,4 +1,5 @@
 import { Router } from "express"
+import { body, param } from 'express-validator'
 import { createProduct } from "./handlers/product"
 
 const router = Router()
