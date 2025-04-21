@@ -1,3 +1,6 @@
+# Administrador de Productos Express (Backend) DataBase (PostgreSQL)
+
+Usando en el Frontend React
 REST API Node TypeScript Server
 
 comandos
