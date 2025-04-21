@@ -23,3 +23,10 @@ npm i swagger-ui-express
 
 npm i -D  @types/swagger-ui-express
 npm i -D @types/swagger-jsdoc
+
+CORS
+npm i cors
+npm i @types/cors
+
+npm i morgan
+npm i --save-dev @types/morgan

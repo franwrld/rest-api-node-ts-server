@@ -1,5 +1,7 @@
 import express from "express";
 import colors from 'colors'
+import cors, {CorsOptions} from 'cors'
+import morgan from 'morgan'
 import swaggerUi from 'swagger-ui-express'
 import swaggerSpec, { swaggerUiOptions } from './config/swagger'
 import router from "./router";
@@ -19,8 +21,21 @@ export async function connetDB() {
 connetDB()
 // Instancia de Express
 const server = express()
+// Cors Permitir conexiones
+const corsOptions : CorsOptions = {
+    origin: function(origin, callback) {
+        if(origin === process.env.FRONTEND_URL) {
+            callback(null, true)
+        } else {
+            callback(new Error('Error de CORS')) 
+        }
+    }
+}
+server.use(cors(corsOptions))
 // Leer datos de forms
 server.use(express.json())
+
+server.use(morgan('dev'))
 
 server.use('/api/products', router)
 
